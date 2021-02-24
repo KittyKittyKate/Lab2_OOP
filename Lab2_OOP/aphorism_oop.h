@@ -7,6 +7,7 @@ namespace collection_of_wisdom_oop {
 	class aphorism : public wisdom {
 		char aphor[50];
 		char author[50];
+		int rate;
 	public:
 		// переопределяем интерфейс класса
 		void InData(ifstream &ifst); // ввод

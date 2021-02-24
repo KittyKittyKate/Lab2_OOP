@@ -7,9 +7,10 @@ namespace collection_of_wisdom_oop {
 	void aphorism::InData(ifstream &ifst) {
 		ifst.getline(this->aphor, 50);
 		ifst.getline(this->author, 50);
+		ifst >> this->rate;
 	}
 	// Вывод параметров прямоугольника
 	void aphorism::Out(ofstream &ofst) {
-		ofst << "'" << this->aphor << "' - " << this->author << endl;
+		ofst << "'" << this->aphor << "' - " << this->author << ". My rate: " << this->rate << endl;
 	}
 } // end collection_of_wisdom_oop namespace

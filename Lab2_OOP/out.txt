@@ -1,0 +1,6 @@
+Filled container.
+Container contents 3 elements.
+0: 'It never rains but it pours' - R.Rollan. My rate: 4
+1: 'Under a stone mat lies still no water flows' - Russian. My rate: 9
+2: 'Fine words butter no parsnips' - Russian. My rate: 8
+Empty container.
