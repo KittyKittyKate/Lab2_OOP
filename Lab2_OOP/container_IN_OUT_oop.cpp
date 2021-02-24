@@ -19,5 +19,16 @@ namespace collection_of_wisdom_oop {
 			ofst << "Count of comma: " << cont[i]->Count_Comma() << endl;
 		}
 	}
+	void container::Sort() { 
+		for (int i = 0; i < length - 1; i++) {
+			for (int j = i + 1; j < length; j++) {
+				if (cont[i]->Compare(*cont[j])) { 
+					wisdom *tmp = cont[i]; 
+					cont[i] = cont[j]; 
+					cont[j] = tmp; 
+				} 
+			} 
+		} 
+	}
 	
 } // end collection_of_wisdom_oop namespace

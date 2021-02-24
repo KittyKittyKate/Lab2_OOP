@@ -13,6 +13,8 @@ namespace collection_of_wisdom_oop {
 		virtual void InData(ifstream &ifst) = 0; // ввод
 		virtual void Out(ofstream &ofst) = 0; // вывод
 		virtual int Count_Comma() = 0;
+		bool Compare(wisdom &other);
+	
 	};
 } // end collection_of_wisdom_oop namespace
 #endif
