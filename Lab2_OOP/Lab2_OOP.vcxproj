@@ -136,6 +136,10 @@
     <ClInclude Include="proverb_oop.h" />
     <ClInclude Include="wisdom_oop.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="in.txt" />
+    <Text Include="out.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

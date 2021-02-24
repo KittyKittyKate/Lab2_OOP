@@ -23,4 +23,7 @@ namespace collection_of_wisdom_oop {
 		sp->InData(ifst);
 		return sp;
 	}
+	void wisdom::OutAphorism(ofstream &ofst) {
+		ofst << "Something" << endl; // пустая строка 
+	}
 } // end collection_of_wisdom_oop namespace

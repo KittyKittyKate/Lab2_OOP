@@ -12,4 +12,7 @@ namespace collection_of_wisdom_oop {
 	void aphorism::Out(ofstream &ofst) {
 		ofst << "'" << this->aphor << "' - " << this->author << endl;
 	}
+	void aphorism::OutAphorism(ofstream &ofst) { 
+		Out(ofst); 
+	}
 } // end collection_of_wisdom_oop namespace

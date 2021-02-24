@@ -11,6 +11,7 @@ namespace collection_of_wisdom_oop {// Простейший контейнер на основе одномерног
 		void Out(ofstream &ofst); // вывод
 		void Clear(); // очистка контейнера от мудрости
 		container(); // инициализация контейнера
+		void OutAphorisms(ofstream &ofst);
 		~container() { Clear(); } // утилизация контейнера
 	};
 } // end collection_of_wisdom_oop namespace

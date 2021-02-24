@@ -12,6 +12,7 @@ namespace collection_of_wisdom_oop {
 		static wisdom* In(ifstream &ifst);
 		virtual void InData(ifstream &ifst) = 0; // ввод
 		virtual void Out(ofstream &ofst) = 0; // вывод
+		virtual void OutAphorism(ofstream &ofst);
 	};
 } // end collection_of_wisdom_oop namespace
 #endif
