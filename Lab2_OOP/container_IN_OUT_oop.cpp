@@ -16,6 +16,8 @@ namespace collection_of_wisdom_oop {
 		for (int i = 0; i < length; i++) {
 			ofst << i << ": ";
 			cont[i]->Out(ofst);
+			ofst << "Count of comma: " << cont[i]->Count_Comma() << endl;
 		}
 	}
+	
 } // end collection_of_wisdom_oop namespace

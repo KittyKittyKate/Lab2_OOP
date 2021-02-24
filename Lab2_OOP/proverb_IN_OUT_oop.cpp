@@ -11,4 +11,16 @@ namespace collection_of_wisdom_oop {
 	void proverb::Out(ofstream &ofst) {
 		ofst << "'" << this->prov << "' - " << this->country << endl;
 	}
+	int proverb::Count_Comma() {
+		int comma = 0;
+		int i = 0;
+		while (this->prov[i] != '\0')
+		{
+			if (this->prov[i] == ',') {
+				comma++;
+			}
+			i++;
+		}
+		return comma;
+	}
 } // end collection_of_wisdom_oop namespace

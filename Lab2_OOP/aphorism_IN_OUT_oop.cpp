@@ -12,4 +12,16 @@ namespace collection_of_wisdom_oop {
 	void aphorism::Out(ofstream &ofst) {
 		ofst << "'" << this->aphor << "' - " << this->author << endl;
 	}
+	int aphorism::Count_Comma() {
+		int comma = 0;
+		int i = 0;
+		while (this->aphor[i] != '\0')
+		{
+			if (this->aphor[i] == ',') {
+				comma++;
+			}
+			i++;
+		}
+		return comma;
+	}
 } // end collection_of_wisdom_oop namespace
