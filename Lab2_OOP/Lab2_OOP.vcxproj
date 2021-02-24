@@ -128,13 +128,19 @@
     <ClCompile Include="container_IN_OUT_oop.cpp" />
     <ClCompile Include="Lab2_OOP.cpp" />
     <ClCompile Include="proverb_IN_OUT_oop.cpp" />
+    <ClCompile Include="puzzle_IN_OUT_oop.cpp" />
     <ClCompile Include="wisdom_IN_oop.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="aphorism_oop.h" />
     <ClInclude Include="container_oop.h" />
     <ClInclude Include="proverb_oop.h" />
+    <ClInclude Include="puzzle_oop.h" />
     <ClInclude Include="wisdom_oop.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="in.txt" />
+    <Text Include="out.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
