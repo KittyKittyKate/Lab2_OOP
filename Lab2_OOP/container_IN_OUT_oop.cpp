@@ -1,10 +1,12 @@
 #include "container_oop.h"
+#include "list_for_sort_oop.h"
 using namespace std;
 namespace collection_of_wisdom_oop {
 	// Ввод содержимого контейнера
-	void container::In(ifstream &ifst) {
+	void container::In(ifstream &ifst, list &list) {
 		while (!ifst.eof()) {
 			if ((cont[length] = wisdom::In(ifst)) != 0) {
+				list.Add(cont[length]);
 				length++;
 			}
 		}
@@ -19,7 +21,7 @@ namespace collection_of_wisdom_oop {
 			ofst << "Count of comma: " << cont[i]->Count_Comma() << endl;
 		}
 	}
-	void container::Sort() { 
+	/*void container::Sort() { 
 		for (int i = 0; i < length - 1; i++) {
 			for (int j = i + 1; j < length; j++) {
 				if (cont[i]->Compare(*cont[j])) { 
@@ -29,6 +31,7 @@ namespace collection_of_wisdom_oop {
 				} 
 			} 
 		} 
-	}
+	}*/
+	
 	
 } // end collection_of_wisdom_oop namespace
