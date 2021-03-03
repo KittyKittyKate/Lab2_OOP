@@ -8,6 +8,7 @@ namespace collection_of_wisdom_oop {
 	// проверку интерфейса
 	class wisdom {
 	public:
+		int rate;
 		// иденитфикация, порождение и ввод фигуры из пото-ка
 		static wisdom* In(ifstream &ifst);
 		virtual void InData(ifstream &ifst) = 0; // ввод

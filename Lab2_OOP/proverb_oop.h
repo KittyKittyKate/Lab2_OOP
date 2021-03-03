@@ -7,7 +7,7 @@ namespace collection_of_wisdom_oop {
 	class proverb : public wisdom {
 		char prov[50];
 		char country[50];
-		int rate;
+		
 	public:
 		// переопределяем интерфейс класса
 		void InData(ifstream &ifst); // ввод

@@ -21,6 +21,7 @@ namespace collection_of_wisdom_oop {
 			return 0;
 		}
 		sp->InData(ifst);
+		ifst >> sp->rate;
 		return sp;
 	}
 } // end collection_of_wisdom_oop namespace

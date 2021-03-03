@@ -16,6 +16,7 @@ namespace collection_of_wisdom_oop {
 		for (int i = 0; i < length; i++) {
 			ofst << i << ": ";
 			cont[i]->Out(ofst);
+			ofst << ". My rate: " << cont[i]->rate << endl;
 		}
 	}
 } // end collection_of_wisdom_oop namespace
