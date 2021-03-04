@@ -10,6 +10,6 @@ namespace collection_of_wisdom_oop {
 	}
 	// Вывод параметров прямоугольника
 	void aphorism::Out(ofstream &ofst) {
-		ofst << "'" << this->aphor << "' - " << this->author << ". My rate: " << endl;
+		ofst << "'" << this->aphor << "' - " << this->author;
 	}
 } // end collection_of_wisdom_oop namespace

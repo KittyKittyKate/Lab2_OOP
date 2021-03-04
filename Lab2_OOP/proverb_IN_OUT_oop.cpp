@@ -9,6 +9,6 @@ namespace collection_of_wisdom_oop {
 	}
 	// Вывод параметров треугольника
 	void proverb::Out(ofstream &ofst) {
-		ofst << "'" << this->prov << "' - " << this->country << endl;
+		ofst << "'" << this->prov << "' - " << this->country;
 	}
 } // end collection_of_wisdom_oop namespace
