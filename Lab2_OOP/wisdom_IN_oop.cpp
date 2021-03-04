@@ -13,7 +13,6 @@ namespace collection_of_wisdom_oop {
 		switch (k) {
 		case 1:
 			sp = new aphorism;
-
 			break;
 		case 2:
 			sp = new proverb;
@@ -27,11 +26,4 @@ namespace collection_of_wisdom_oop {
 	bool wisdom::Compare(wisdom &other) {
 		return Count_Comma() < other.Count_Comma(); 
 	}
-	wisdom* wisdom::GetNext()
-	{
-		return m_Next;
-	}
-
-	
-
 } // end collection_of_wisdom_oop namespace
