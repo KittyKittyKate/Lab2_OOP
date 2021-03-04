@@ -24,7 +24,9 @@ namespace collection_of_wisdom_oop {
 		default:
 			return 0;
 		}
+		ifst.getline(sp->expression, 50);
 		sp->InData(ifst);
+		ifst >> sp->rate;
 		return sp;
 	}
 	bool wisdom::Compare(wisdom &other) {
