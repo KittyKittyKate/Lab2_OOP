@@ -33,5 +33,11 @@ namespace collection_of_wisdom_oop {
 			} 
 		} 
 	}
-	
+	void container::OutAphorisms(ofstream &ofst) { 
+		ofst << "Only aphorisms." << endl; 
+		for (int i = 0; i < length; i++) {
+			ofst << i << ": "; 
+			cont[i]->OutAphorism(ofst); 
+		} 
+	}
 } // end collection_of_wisdom_oop namespace
