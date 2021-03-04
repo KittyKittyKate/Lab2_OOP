@@ -1,6 +1,9 @@
 Filled container.
 Container contents 3 elements.
-0: 'It never rains but it pours' - R.Rollan
-1: 'Under a stone mat lies still no water flows' - Russian
-2: 'Fine words butter no parsnips' - Russian
+0: ' It never rains,, but it pours' - R.Rollan
+Count of comma: 2
+1: ' Fine words,, butter no parsnips' - Russian
+Count of comma: 2
+2: ' Under a stone mat lies, still no water flows' - Russian
+Count of comma: 1
 Empty container.

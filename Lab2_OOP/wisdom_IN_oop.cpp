@@ -27,4 +27,7 @@ namespace collection_of_wisdom_oop {
 		sp->InData(ifst);
 		return sp;
 	}
+	bool wisdom::Compare(wisdom &other) {
+		return Count_Comma() < other.Count_Comma(); 
+	}
 } // end collection_of_wisdom_oop namespace

@@ -11,6 +11,7 @@ namespace collection_of_wisdom_oop {
 		// переопределяем интерфейс класса
 		void InData(ifstream &ifst); // ввод
 		void Out(ofstream &ofst); // вывод
+		int Count_Comma();
 		aphorism() {} // создание без инициализации.
 	};
 } // end collection_of_wisdom_oop namespace

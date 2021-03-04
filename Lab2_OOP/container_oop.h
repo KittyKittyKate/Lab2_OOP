@@ -10,6 +10,7 @@ namespace collection_of_wisdom_oop {// ѕростейший контейнер на основе одномерног
 		void In(ifstream &ifst); // ввод
 		void Out(ofstream &ofst); // вывод
 		void Clear(); // очистка контейнера от мудрости
+		void Sort();
 		container(); // инициализаци€ контейнера
 		~container() { Clear(); } // утилизаци€ контейнера
 	};
