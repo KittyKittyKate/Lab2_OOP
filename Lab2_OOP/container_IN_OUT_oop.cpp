@@ -17,7 +17,9 @@ namespace collection_of_wisdom_oop {
 			ofst << i << ": ";
 			ofst << "'" << cont[i]->expression << "' - ";
 			cont[i]->Out(ofst);
+			ofst << ". My rate: " << cont[i]->rate << endl;
 			ofst << "Count of comma: " << cont[i]->Count_Comma() << endl;
+			
 		}
 	}
 	void container::Sort() { 

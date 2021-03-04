@@ -24,12 +24,24 @@ namespace collection_of_wisdom_oop {
 		default:
 			return 0;
 		}
-		ifst.getline(sp->expression, 50);
+		ifst.getline(sp->expression, 100);
 		sp->InData(ifst);
 		ifst >> sp->rate;
 		return sp;
 	}
 	bool wisdom::Compare(wisdom &other) {
 		return Count_Comma() < other.Count_Comma(); 
+	}
+	int wisdom::Count_Comma() {
+		int comma = 0;
+		int i = 0;
+		while (this->expression[i] != '\0')
+		{
+			if (this->expression[i] == ',') {
+				comma++;
+			}
+			i++;
+		}
+		return comma;
 	}
 } // end collection_of_wisdom_oop namespace

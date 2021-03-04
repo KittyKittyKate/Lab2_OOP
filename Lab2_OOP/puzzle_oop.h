@@ -5,13 +5,12 @@
 namespace collection_of_wisdom_oop {
 	
 	class puzzle : public wisdom {
-		char puzzle_str[200];
+		//char puzzle_str[200];
 		char answer[20];
 	public:
 		// переопределяем интерфейс класса
 		void InData(ifstream &ifst); // ввод
 		void Out(ofstream &ofst); // вывод
-		int Count_Comma();
 		puzzle() {} // создание без инициализации.
 	};
 } // end collection_of_wisdom_oop namespace

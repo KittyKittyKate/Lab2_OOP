@@ -5,14 +5,12 @@
 namespace collection_of_wisdom_oop {
 	// прямоугольник
 	class aphorism : public wisdom {
-		//char aphor[50];
 		char author[50];
 		
 	public:
 		// переопределяем интерфейс класса
 		void InData(ifstream &ifst); // ввод
 		void Out(ofstream &ofst); // вывод
-		int Count_Comma();
 		aphorism() {} // создание без инициализации.
 	};
 } // end collection_of_wisdom_oop namespace
