@@ -17,9 +17,14 @@ int main(int argc, char* argv[]) {
 	container c = container();
 	c.In(ifst);
 	ofst << "Filled container." << endl;
-	c.Sort();
-	c.Out(ofst);
-	c.OutAphorisms(ofst);
+
+	c.Out(ofst);// обыкновенный вывод
+
+	c.Sort();//отсортировали
+	c.Out(ofst);//вывод сортированного контейнера
+
+	c.OutAphorisms(ofst);//вывод только афоризмов
+
 	c.Clear();
 	ofst << "Empty container." << endl;
 	cout << "Goodbye" << endl;

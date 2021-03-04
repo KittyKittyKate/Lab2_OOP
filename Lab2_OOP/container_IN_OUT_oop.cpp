@@ -37,7 +37,10 @@ namespace collection_of_wisdom_oop {
 		ofst << "Only aphorisms." << endl; 
 		for (int i = 0; i < length; i++) {
 			ofst << i << ": "; 
-			cont[i]->OutAphorism(ofst); 
+			//ofst << "'" << cont[i]->expression << "' - ";
+			cont[i]->OutAphorism(ofst, cont[i]); 
+			//ofst << ". My rate: " << cont[i]->rate << endl;
+			//ofst << "Count of comma: " << cont[i]->Count_Comma() << endl;
 		} 
 	}
 } // end collection_of_wisdom_oop namespace

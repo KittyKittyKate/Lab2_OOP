@@ -11,7 +11,10 @@ namespace collection_of_wisdom_oop {
 	void aphorism::Out(ofstream &ofst) {
 		ofst << this->author;
 	}
-	void aphorism::OutAphorism(ofstream &ofst) { 
-		Out(ofst); 
+	void aphorism::OutAphorism(ofstream &ofst, wisdom *sp) { 
+		ofst << "'" << sp->expression << "' - ";
+		Out(ofst);
+		ofst << ". My rate: " << sp->rate << endl;
+		ofst << "Count of comma: " << sp->Count_Comma() << endl;
 	}
 } // end collection_of_wisdom_oop namespace

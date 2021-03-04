@@ -44,4 +44,7 @@ namespace collection_of_wisdom_oop {
 		}
 		return comma;
 	}
+	void wisdom::OutAphorism(ofstream &ofst, wisdom *sp) {
+		ofst << endl; 
+	}
 } // end collection_of_wisdom_oop namespace
