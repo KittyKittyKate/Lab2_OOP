@@ -5,7 +5,7 @@
 namespace collection_of_wisdom_oop {
 	// треугольник
 	class proverb : public wisdom {
-		char prov[50];
+		//char prov[50];
 		char country[50];
 		
 	public:

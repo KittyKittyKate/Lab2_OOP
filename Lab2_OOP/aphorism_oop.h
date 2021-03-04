@@ -5,7 +5,7 @@
 namespace collection_of_wisdom_oop {
 	// прямоугольник
 	class aphorism : public wisdom {
-		char aphor[50];
+		//char aphor[50];
 		char author[50];
 		
 	public:

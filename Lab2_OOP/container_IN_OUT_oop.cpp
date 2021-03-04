@@ -15,6 +15,7 @@ namespace collection_of_wisdom_oop {
 			<< " elements." << endl;
 		for (int i = 0; i < length; i++) {
 			ofst << i << ": ";
+			ofst << "'" << cont[i]->expression << "' - ";
 			cont[i]->Out(ofst);
 			ofst << ". My rate: " << cont[i]->rate << endl;
 		}
