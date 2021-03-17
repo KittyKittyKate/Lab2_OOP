@@ -21,7 +21,11 @@ namespace collection_of_wisdom_oop {
 		case 3:
 			sp = new puzzle;
 			break;
-		default:
+		default: //Если попадаем сюда, то застрянем. Временное решение: пусть мудрость с неправильным ключом просто не будет заноситься в контейнер
+			char Junk[100]; //для мусора
+			ifst.getline(Junk, 100); //Здесь - выражение
+			ifst.getline(Junk, 100); //Здесь - уникальная характеристика
+			ifst.getline(Junk, 100); //Здесь - оценка
 			return 0;
 		}
 		ifst.getline(sp->expression, 100);
@@ -30,7 +34,7 @@ namespace collection_of_wisdom_oop {
 		return sp;
 	}
 	bool wisdom::Compare(wisdom &other) {
-		return Count_Comma() < other.Count_Comma(); 
+		return Count_Comma() > other.Count_Comma(); 
 	}
 	int wisdom::Count_Comma() {
 		int comma = 0;

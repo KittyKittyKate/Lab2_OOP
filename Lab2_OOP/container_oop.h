@@ -4,9 +4,10 @@
 namespace collection_of_wisdom_oop {// Простейший контейнер на основе одномерного массива
 	class container {
 		enum { max_len = 100 }; // максимальная длина
-		int length; // текущая длина
+		 // текущая длина
 		wisdom *cont[max_len];
 	public:
+		int length;
 		void In(ifstream &ifst); // ввод
 		void Out(ofstream &ofst); // вывод
 		void Clear(); // очистка контейнера от мудрости
