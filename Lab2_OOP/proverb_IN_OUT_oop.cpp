@@ -13,6 +13,7 @@ namespace collection_of_wisdom_oop {
 			Line.resize(49);
 			strcpy_s(this->country, 50, Line.c_str());
 		}
+		Line.clear();
 	}
 	
 	void proverb::Out(ofstream &ofst) {

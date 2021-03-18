@@ -1,6 +1,5 @@
 ﻿#include "pch.h"
 #include "CppUnitTest.h"
-#include "difference.h"
 #include <fstream>
 #include "../Lab2_OOP/container_oop.h"
 #include "../Lab2_OOP/container_CONSTR_oop.cpp"
@@ -205,7 +204,7 @@ namespace TestforOOP
 		}
 	};
 }
-//проверить 
+
 int Difference(ifstream & ifst_1, ifstream & ifst_2)
 {
 	char ch_1 = '0';
@@ -215,7 +214,6 @@ int Difference(ifstream & ifst_1, ifstream & ifst_2)
 		if (ch_1 != ch_2)
 		{
 			return 0;
-			//break;
 		}
 	}
 	return 1;

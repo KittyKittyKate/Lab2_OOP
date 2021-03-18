@@ -13,6 +13,7 @@ namespace collection_of_wisdom_oop {
 			Line.resize(49);
 			strcpy_s(this->author, 50, Line.c_str());
 		}
+		Line.clear();
 	}
 	void aphorism::Out(ofstream &ofst) {
 		ofst << this->author;

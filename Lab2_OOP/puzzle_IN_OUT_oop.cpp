@@ -13,6 +13,7 @@ namespace collection_of_wisdom_oop {
 			Line.resize(19);
 			strcpy_s(this->answer, 20, Line.c_str());
 		}
+		Line.clear();
 	}
 	
 	void puzzle::Out(ofstream &ofst) {
