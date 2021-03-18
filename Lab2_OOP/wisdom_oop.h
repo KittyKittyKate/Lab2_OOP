@@ -1,6 +1,7 @@
 #ifndef __wisdom__
 #define __wisdom__
 #include <fstream>
+#include <string>
 using namespace std;
 namespace collection_of_wisdom_oop {
 	// Класс, обобщающает всю имеющююся мудрость.

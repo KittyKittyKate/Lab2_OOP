@@ -4,6 +4,8 @@
 #include "aphorism_oop.h"
 #include "proverb_oop.h"
 #include "puzzle_oop.h"
+#include <iostream>
+#include <string>
 using namespace std;
 namespace collection_of_wisdom_oop {
 	// Ввод параметров обобщенной фигуры
@@ -28,10 +30,22 @@ namespace collection_of_wisdom_oop {
 			ifst.getline(Junk, 100); //Здесь - оценка
 			return 0;
 		}
-		ifst.getline(sp->expression, 100);
-		sp->InData(ifst);
-		ifst >> sp->rate;
-		return sp;
+		string Line; //Временное решение на случай переполнения
+		getline(ifst, Line); //Строка заносится в Line
+		if (Line.length() < 100) { //Проверка на переполнение - если длина Line < 100
+			strcpy_s(sp->expression, 100, Line.c_str());
+			sp->InData(ifst);
+			ifst >> sp->rate;
+			return sp;
+		}
+		else { //иначе придется отсечь лишнее
+			Line.resize(99);
+			strcpy_s(sp->expression, 100, Line.c_str());
+			sp->InData(ifst);
+			ifst >> sp->rate;
+			return sp;
+		}
+		Line.clear();
 	}
 	bool wisdom::Compare(wisdom &other) {
 		return Count_Comma() > other.Count_Comma(); 

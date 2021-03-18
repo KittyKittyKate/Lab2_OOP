@@ -1,5 +1,6 @@
 ﻿#include "pch.h"
 #include "CppUnitTest.h"
+#include "difference.h"
 #include <fstream>
 #include "../Lab2_OOP/container_oop.h"
 #include "../Lab2_OOP/container_CONSTR_oop.cpp"
@@ -17,8 +18,11 @@ using namespace collection_of_wisdom_oop;
 using namespace std;
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
+int Difference(ifstream &ifst_1, ifstream &ifst_2);
+
 namespace TestforOOP
 {
+
 	TEST_CLASS(TestforOOP)
 	{
 	public:
@@ -123,11 +127,96 @@ namespace TestforOOP
 		TEST_METHOD(Wisdom_InData_OverBuf) //Проверка функции InData на поведение в случае переполнения
 		{
 			ifstream ifst("in_1_overbuf.txt"); //В файле один афоризм с выражением > 100 символов
+			ofstream ofst("out_1_overbuf.txt");
+			ifstream ifst_IDEAL("in_1_overbuf_IDEAL.txt");
 			container c = container();
 			c.In(ifst);
-			//char *exp_overbuf = c[0]->expression;
-			//Assert::AreEqual(real_len, 1);//OK
+			c.Out(ofst);
+			//тут сравнение двух файлов
+			ifstream ifst_to_cmp("out_1_overbuf.txt");
+			Assert::AreEqual(Difference(ifst_to_cmp, ifst_IDEAL), 1); //OK
+			c.Clear();
+		}
+		TEST_METHOD(Wisdom_CountOfComma_0) //Проверка функции CountOfComma в случае 0 запятых
+		{
+			ifstream ifst("in_0_commas.txt"); //В выражении нет запятых
+			ofstream ofst("out_0_commas.txt");
+			ifstream ifst_IDEAL("out_0_commas_IDEAL.txt");
+			container c = container();
+			c.In(ifst);
+			c.Out(ofst);
+			//тут сравнение двух файлов
+			ifstream ifst_to_cmp("out_0_commas.txt");
+			Assert::AreEqual(Difference(ifst_to_cmp, ifst_IDEAL), 1); //OK
+			c.Clear();
+		}
+		TEST_METHOD(Wisdom_CountOfComma_1) //Проверка функции CountOfComma в случае 1 запятых
+		{
+			ifstream ifst("in_1_comma.txt"); //В выражении 1 запятая
+			ofstream ofst("out_1_comma.txt");
+			ifstream ifst_IDEAL("out_1_comma_IDEAL.txt");
+			container c = container();
+			c.In(ifst);
+			c.Out(ofst);
+			//тут сравнение двух файлов
+			ifstream ifst_to_cmp("out_1_comma.txt");
+			Assert::AreEqual(Difference(ifst_to_cmp, ifst_IDEAL), 1); //OK
+			c.Clear();
+		}
+		TEST_METHOD(Wisdom_CountOfComma_5) //Проверка функции CountOfComma в случае 5 запятых
+		{
+			ifstream ifst("in_5_commas.txt"); //В выражении 5 запятых
+			ofstream ofst("out_5_commas.txt");
+			ifstream ifst_IDEAL("out_5_commas_IDEAL.txt");
+			container c = container();
+			c.In(ifst);
+			c.Out(ofst);
+			//тут сравнение двух файлов
+			ifstream ifst_to_cmp("out_5_commas.txt");
+			Assert::AreEqual(Difference(ifst_to_cmp, ifst_IDEAL), 1); //OK
+			c.Clear();
+		}
+		TEST_METHOD(Container_Clean_0) //Проверка очистки контейнера при отсутствии элементов
+		{
+			ifstream ifst("in_0.txt"); //В файле пусто
+			//ofstream ofst("out_0.txt");
+			//ifstream ifst_IDEAL("out_0_IDEAL.txt");
+			container c = container();
+			c.In(ifst);
+			//c.Out(ofst);
+			//тут сравнение двух файлов
+			//ifstream ifst_to_cmp("out_0.txt");
+			//
+			c.Clear();//OK, цикл не начинался
+			Assert::AreEqual(c.length, 0); //OK
+		}
+		TEST_METHOD(A_P_P_OverBuf) //Проверка функций InData трех подклассов на поведение в случае переполнения
+		{
+			ifstream ifst("in_3_overbuf.txt"); //В файле 3 мудрости с переполненными уник. хар-ми 
+			ofstream ofst("out_3_overbuf.txt");
+			ifstream ifst_IDEAL("out_3_overbuf_IDEAL.txt");
+			container c = container();
+			c.In(ifst);
+			c.Out(ofst);
+			//тут сравнение двух файлов
+			ifstream ifst_to_cmp("out_3_overbuf.txt");
+			Assert::AreEqual(Difference(ifst_to_cmp, ifst_IDEAL), 1); //OK 
 			c.Clear();
 		}
 	};
+}
+//проверить 
+int Difference(ifstream & ifst_1, ifstream & ifst_2)
+{
+	char ch_1 = '0';
+	char ch_2 = '0';
+	
+	while (ifst_1.get(ch_1) && ifst_2.get(ch_2)) {
+		if (ch_1 != ch_2)
+		{
+			return 0;
+			//break;
+		}
+	}
+	return 1;
 }

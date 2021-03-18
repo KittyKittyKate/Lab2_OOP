@@ -4,7 +4,15 @@ using namespace std;
 namespace collection_of_wisdom_oop {
 
 	void puzzle::InData(ifstream &ifst) {
-		ifst.getline(this->answer, 20);
+		string Line; //Временное решение на случай переполнения
+		getline(ifst, Line); //Строка заносится в Line
+		if (Line.length() < 20) { //Проверка на переполнение - если длина Line < 20
+			strcpy_s(this->answer, 20, Line.c_str());
+		}
+		else {
+			Line.resize(19);
+			strcpy_s(this->answer, 20, Line.c_str());
+		}
 	}
 	
 	void puzzle::Out(ofstream &ofst) {
