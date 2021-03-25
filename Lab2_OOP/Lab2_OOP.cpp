@@ -5,7 +5,7 @@ using namespace std;
 using namespace collection_of_wisdom_oop;
 
 int main(int argc, char* argv[]) {
-	setlocale(LC_ALL, "Russian");
+	//setlocale(LC_ALL, "Russian");
 	if (argc != 3) {
 		cout << "Incorrect command line!"
 			"Syntax: command infile outfile" << endl;
@@ -13,6 +13,10 @@ int main(int argc, char* argv[]) {
 	}
 	ifstream ifst(argv[1]);
 	ofstream ofst(argv[2]);
+	if (!ifst) {
+		cout << "The file doesn't exist." << endl;
+		return 0;
+	}
 	cout << "Let's begin" << endl;
 	container c = container();
 	c.In(ifst);

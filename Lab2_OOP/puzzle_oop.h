@@ -9,7 +9,7 @@ namespace collection_of_wisdom_oop {
 		char answer[20];
 	public:
 		// переопределяем интерфейс класса
-		void InData(ifstream &ifst); // ввод
+		string InData(ifstream &ifst); // ввод
 		void Out(ofstream &ofst); // вывод
 		puzzle() {} // создание без инициализации.
 	};

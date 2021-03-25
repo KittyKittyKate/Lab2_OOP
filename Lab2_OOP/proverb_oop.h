@@ -9,7 +9,7 @@ namespace collection_of_wisdom_oop {
 		
 	public:
 		// переопределяем интерфейс класса
-		void InData(ifstream &ifst); // ввод
+		string InData(ifstream &ifst); // ввод
 		void Out(ofstream &ofst); // вывод
 		proverb() {} // создание без инициализации.
 	};

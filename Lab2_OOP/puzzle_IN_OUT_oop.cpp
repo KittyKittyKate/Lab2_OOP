@@ -1,19 +1,42 @@
 #include <iostream>
 #include "puzzle_oop.h"
+#include <string>
+
 using namespace std;
 namespace collection_of_wisdom_oop {
 
-	void puzzle::InData(ifstream &ifst) {
-		string Line; //¬ременное решение на случай переполнени€
-		getline(ifst, Line); //—трока заноситс€ в Line
-		if (Line.length() < 20) { //ѕроверка на переполнение - если длина Line < 20
-			strcpy_s(this->answer, 20, Line.c_str());
+	string puzzle::InData(ifstream &ifst) {
+		string Full_Line;
+		string Data;
+		bool Exit_Flag = true;
+
+		do {
+			getline(ifst, Full_Line);//строка с ответа
+			Data = FindData("Answer:", Full_Line);//¬ Data будет ответ
+			Exit_Flag = true;
+
+			if (Data.compare("error") == 0) { //если ответа нет, то выбрасываем послед. строки и переходим к новой мудрости
+				delete[] this;
+				string Junk; //дл€ мусора
+				getline(ifst, Junk); //«десь - оценка
+				Junk.clear();
+				return "error";
+			}
+			else if (Data.compare("empty") == 0) {//если пуста€ строка
+				Exit_Flag = false; // если false, то продолжаем цикл
+			}
+		} while ((ifst.eof() == false) && (Exit_Flag == false));
+
+		if (ifst.eof()) {
+			cout << "INFORMATION: the end of file." << endl;
+			return "";
 		}
-		else {
-			Line.resize(19);
-			strcpy_s(this->answer, 20, Line.c_str());
+		else { //если не конец файла, то провер€ем на переполнение
+			this->CheckForOverflow(Data, this->answer, ifst, 20);
+			Data.clear();
+			Full_Line.clear();
+			return "";
 		}
-		Line.clear();
 	}
 	
 	void puzzle::Out(ofstream &ofst) {

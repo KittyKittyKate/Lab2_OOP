@@ -1,19 +1,42 @@
 #include <iostream>
 #include "proverb_oop.h"
+#include <string>
+
 using namespace std;
 namespace collection_of_wisdom_oop {
 	
-	void proverb::InData(ifstream &ifst) {
-		string Line; //¬ременное решение на случай переполнени€
-		getline(ifst, Line); //—трока заноситс€ в Line
-		if (Line.length() < 50) { //ѕроверка на переполнение - если длина Line < 50
-			strcpy_s(this->country, 50, Line.c_str());
+	string proverb::InData(ifstream &ifst) {
+		string Full_Line;
+		string Data;
+		bool Exit_Flag = true;
+
+		do {
+			getline(ifst, Full_Line);//строка со страной
+			Data = FindData("Country:", Full_Line);//¬ Data будет страна
+			Exit_Flag = true;
+
+			if (Data.compare("error") == 0) { //если страны нет, то выбрасываем послед. строки и переходим к новой мудрости
+				delete[] this;
+				string Junk; //дл€ мусора
+				getline(ifst, Junk); //«десь - оценка
+				Junk.clear();
+				return "error";
+			}
+			else if (Data.compare("empty") == 0) {//если пуста€ строка
+				Exit_Flag = false; // если false, то продолжаем цикл
+			}
+		} while ((ifst.eof() == false) && (Exit_Flag == false));
+
+		if (ifst.eof()) {
+			cout << "INFORMATION: the end of file." << endl;
+			return "";
 		}
-		else {
-			Line.resize(49);
-			strcpy_s(this->country, 50, Line.c_str());
+		else { //если не конец файла, то провер€ем на переполнение
+			this->CheckForOverflow(Data, this->country, ifst, 50);
+			Data.clear();
+			Full_Line.clear();
+			return "";
 		}
-		Line.clear();
 	}
 	
 	void proverb::Out(ofstream &ofst) {
