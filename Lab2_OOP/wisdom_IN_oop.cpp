@@ -16,7 +16,7 @@ namespace collection_of_wisdom_oop {
 		wisdom *sp;
 		int k = 0;
 
-		string Full_Line;
+		string Full_Line;//число
 		getline(ifst, Full_Line);
 		string Data = FindData("Type of wisdom:", Full_Line);
 		if (Data.compare("error") != 0 && Data.compare("empty") != 0) {// если НЕ "ошибка"(данные не введены) И НЕ "пусто"(пустая строка)
@@ -97,7 +97,7 @@ namespace collection_of_wisdom_oop {
 			return 0;
 		}//иначе продолжаем
 
-		do {
+		do {//ищем оценку
 			getline(ifst, Full_Line);
 			Data = FindData("Rate:", Full_Line);
 
@@ -118,7 +118,8 @@ namespace collection_of_wisdom_oop {
 					}
 					else {//если с оценкой все хорошо
 						sp->rate = static_cast<int>(stoi(Data, 0, 10));
-						Exit_Flag = true;
+						//Exit_Flag = true;
+						return sp;
 					}
 				}
 				catch (string Data) {
@@ -139,8 +140,6 @@ namespace collection_of_wisdom_oop {
 		}
 
 		Full_Line.clear();
-
-		return sp;
 	}
 	string wisdom::FindData(const string &Text, string &Line)
 	{
@@ -168,10 +167,16 @@ namespace collection_of_wisdom_oop {
 				return "error";
 			}
 		}
-		catch (int Position) {// если Position != 0
-			cout << "WARNING: unexpected format of data (" << Line.substr(0, Position + static_cast<int>(Text.length())) << ")." << endl;
-			Data = Line.substr(Position + static_cast<int>(Text.length()), static_cast<int>(Line.length()) - 1);
-			return Data;
+		catch (int Position) {
+			if (Position != -1) {
+				cout << "WARNING: unexpected format of data (" << Line.substr(0, Position + static_cast<int>(Text.length())) << ")." << endl;
+				Data = Line.substr(Position + static_cast<int>(Text.length()), static_cast<int>(Line.length()) - 1);
+				return Data;
+			}
+			else if (Position == -1) {//если данные введены неправильно
+				cout << "ERROR: incorrect data format." << endl;
+				return "error";
+			}
 		}
 	}
 	void wisdom::Junk(ifstream &ifst)
