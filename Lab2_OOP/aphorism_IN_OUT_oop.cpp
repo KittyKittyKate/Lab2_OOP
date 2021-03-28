@@ -15,7 +15,6 @@ namespace collection_of_wisdom_oop {
 			Exit_Flag = true;
 
 			if (Data.compare("error") == 0) { //если автора нет, то выбрасываем послед. строки и переходим к новой мудрости
-				delete[] this;
 				string Junk; //дл€ мусора
 				getline(ifst, Junk); //«десь - оценка
 				Junk.clear();
