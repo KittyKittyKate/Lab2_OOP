@@ -16,6 +16,7 @@ namespace collection_of_wisdom_oop {
 		void MultiMethod(wisdom *other, ofstream &ofst);
 		void MMAphorism(ofstream &ofst);
 		void MMProverb(ofstream &ofst);
+		void MMOut(ofstream &ofst);
 	};
 } // end collection_of_wisdom_oop namespace
 #endif

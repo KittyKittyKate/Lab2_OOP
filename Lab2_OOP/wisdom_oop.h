@@ -21,6 +21,7 @@ namespace collection_of_wisdom_oop {
 		virtual void MultiMethod(wisdom *other, ofstream &ofst) = 0;
 		virtual void MMAphorism(ofstream &ofst) = 0;
 		virtual void MMProverb(ofstream &ofst) = 0;
+		virtual void MMOut(ofstream &ofst) = 0;
 	};
 } // end collection_of_wisdom_oop namespace
 #endif

@@ -9,7 +9,10 @@ namespace collection_of_wisdom_oop {
 	}
 	// Вывод параметров прямоугольника
 	void aphorism::Out(ofstream &ofst) {
-		ofst << this->author;
+		ofst << this->author << endl;
+	}
+	void aphorism::MMOut(ofstream &ofst) {
+		ofst << "'" << this->expression << "' - " << this->author << endl;
 	}
 	void aphorism::OutAphorism(ofstream &ofst, wisdom *sp) { 
 		ofst << "'" << sp->expression << "' - ";

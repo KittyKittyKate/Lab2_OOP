@@ -8,6 +8,9 @@ namespace collection_of_wisdom_oop {
 	}
 	
 	void proverb::Out(ofstream &ofst) {
-		ofst << this->country;
+		ofst << this->country << endl;
+	}
+	void proverb::MMOut(ofstream &ofst) {
+		ofst << "'" << this->expression << "' - " << this->country << endl;
 	}
 } // end collection_of_wisdom_oop namespace

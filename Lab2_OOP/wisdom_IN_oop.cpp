@@ -18,9 +18,9 @@ namespace collection_of_wisdom_oop {
 		case 2:
 			sp = new proverb;
 			break;
-		case 3:
+		/*case 3:
 			sp = new puzzle;
-			break;
+			break;*/
 		default:
 			return 0;
 		}

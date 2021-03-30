@@ -1,8 +1,15 @@
 Filled container.
-Only aphorisms.
-0: 'It never rains,, but it pours' - R.Rollan. My rate: 4
-Count of comma: 2
-1: 
-2: 
-3: 
+Multimethod.
+
+Proverb and Aphorism
+'It never rains,, but it pours' - R.Rollan
+'Under a stone mat lies, still no water flows' - Russian
+
+Proverb and Aphorism
+'It never rains,, but it pours' - R.Rollan
+'Fine words,, butter no parsnips' - Russian
+
+Proverb and Proverb
+'Under a stone mat lies, still no water flows' - Russian
+'Fine words,, butter no parsnips' - Russian
 Empty container.
