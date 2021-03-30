@@ -9,7 +9,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test_for_OOP", "Test_for_OO
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B3EEBA0D-8C00-474F-8826-A9E7706A6815}"
 	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
+		.clang-format = .clang-format
 	EndProjectSection
 EndProject
 Global

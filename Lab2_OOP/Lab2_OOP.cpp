@@ -5,7 +5,7 @@
 using namespace std;
 using namespace collection_of_wisdom_oop;
 
-int main(int argc, char* argv[]) {
+int main(int argc,char* argv[]) {
 	if (argc != 3) {
 		cout << "Incorrect command line! Syntax: command infile.txt outfile.txt" << endl;
 		exit(1);

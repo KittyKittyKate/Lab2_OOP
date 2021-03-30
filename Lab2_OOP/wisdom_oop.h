@@ -10,7 +10,7 @@ namespace collection_of_wisdom_oop {
 	public:
 		char expression[100];
 		int rate;
-		static wisdom* In(ifstream &ifst);
+		static wisdom *In(ifstream &ifst);
 		virtual string InData(ifstream &ifst) = 0;
 		virtual void Out(ofstream &ofst) = 0;
 		virtual void OutAphorism(ofstream &ofst, wisdom *sp);
@@ -18,7 +18,7 @@ namespace collection_of_wisdom_oop {
 		bool Compare(wisdom &other);
 		static string FindData(const string &Text, string &Line);
 		static void Junk(ifstream &ifst);
-		static char& CheckForOverflow(string & Data, char char_text[], ifstream &ifst, int Len);
+		static char &CheckForOverflow(string &Data, char char_text[], ifstream &ifst, int Len);
 	};
 }
 #endif
