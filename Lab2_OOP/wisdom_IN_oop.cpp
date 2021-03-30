@@ -141,6 +141,8 @@ namespace collection_of_wisdom_oop {
 		}
 
 		Full_Line.clear();//Чистим Full_Line.
+		return 0;
+		//C4715 - Жалуется. Если программа попадает в это место, то что-то явно пошло не так.
 	}
 	string wisdom::FindData(const string &Text, string &Line) {
 		string Data;
@@ -182,6 +184,7 @@ namespace collection_of_wisdom_oop {
 				return "error";
 			}
 		}
+		//C4715 - Говорит, мол, значение возвращается не при всех путях выполнения. На самом деле предусмотрен возврат для всех возможных сценариев. 
 	}
 	void wisdom::Junk(ifstream &ifst) {
 		string Junk; //Для мусора.
