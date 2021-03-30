@@ -3,7 +3,6 @@
 using namespace std;
 
 namespace collection_of_wisdom_oop {
-	//Ввод в контейнер
 	void container::In(ifstream &ifst) {
 		while (!ifst.eof()) {
 			if ((cont[length] = wisdom::In(ifst)) != 0) {
@@ -11,10 +10,9 @@ namespace collection_of_wisdom_oop {
 			}
 		}
 	}
-	//Вывод содержимого контейнера
 	void container::Out(ofstream &ofst) {
-		ofst << "Container contents " << length
-			<< " elements." << endl;
+		ofst << "Container contents " << length << " elements." << endl;
+
 		for (int i = 0; i < length; i++) {
 			ofst << i << ": ";
 			ofst << "'" << cont[i]->expression << "' - ";
@@ -23,7 +21,6 @@ namespace collection_of_wisdom_oop {
 			ofst << "Count of comma: " << cont[i]->Count_Comma() << endl;
 		}
 	}
-	//Сортировка
 	void container::Sort() { 
 		for (int i = 0; i < length - 1; i++) {
 			for (int j = i + 1; j < length; j++) {
@@ -35,12 +32,12 @@ namespace collection_of_wisdom_oop {
 			}
 		}
 	}
-	//Вывод только афоризмов
 	void container::OutAphorisms(ofstream &ofst) {
 		ofst << "Only aphorisms." << endl;
+
 		for (int i = 0; i < length; i++) {
 			ofst << i << ": ";
 			cont[i]->OutAphorism(ofst, cont[i]);
 		}
 	}
-} // end collection_of_wisdom_oop namespace
+}

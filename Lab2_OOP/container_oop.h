@@ -1,20 +1,20 @@
 #ifndef __container__
 #define __container__
 #include "wisdom_oop.h"
-namespace collection_of_wisdom_oop {// Простейший контейнер на основе одномерного массива
+
+namespace collection_of_wisdom_oop {
 	class container {
-		enum { max_len = 100 }; // максимальная длина
-		 // текущая длина
+		enum { max_len = 100 };
 		wisdom *cont[max_len];
 	public:
 		int length;
-		void In(ifstream &ifst); // ввод
-		void Out(ofstream &ofst); // вывод
-		void Clear(); // очистка контейнера от мудрости
+		void In(ifstream &ifst); 
+		void Out(ofstream &ofst);
+		void Clear();
 		void Sort();
-		container(); // инициализация контейнера
+		container();
 		void OutAphorisms(ofstream &ofst);
-		~container() { Clear(); } // утилизация контейнера
+		~container() { Clear(); }
 	};
-} // end collection_of_wisdom_oop namespace
+} 
 #endif

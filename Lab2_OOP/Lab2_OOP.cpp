@@ -10,12 +10,15 @@ int main(int argc, char* argv[]) {
 		cout << "Incorrect command line! Syntax: command infile.txt outfile.txt" << endl;
 		exit(1);
 	}
+
 	ifstream ifst(argv[1]);
 	ofstream ofst(argv[2]);
+
 	if (!ifst) {
 		cout << "The file doesn't exist." << endl;
 		return 0;
 	}
+
 	cout << "Let's begin" << endl;
 	container c = container();
 	c.In(ifst);

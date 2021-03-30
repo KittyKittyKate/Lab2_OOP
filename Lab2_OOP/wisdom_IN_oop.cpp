@@ -4,7 +4,6 @@
 #include "puzzle_oop.h"
 #include <iostream>
 #include <string>
-#include <typeinfo>
 #include "limits.h"
 
 using namespace std;
@@ -14,30 +13,31 @@ namespace collection_of_wisdom_oop {
 		wisdom *sp;
 		int k = 0;
 		string Full_Line;
-
-		getline(ifst, Full_Line);//Считываем строку в Full_Line.
+		getline(ifst, Full_Line);	//Считываем строку в Full_Line.
 		string Data = FindData("Type of wisdom:", Full_Line);
-		if (Data.compare("error") != 0 && Data.compare("empty") != 0) {//Если FindData не вернула "error" или "empty".
+
+		if (Data.compare("error") != 0 && Data.compare("empty") != 0) {	//Если FindData не вернула "error" или "empty".
 			try {
 				if (isdigit(Data[0]) == 0) {
-					throw Data;//Исключение: Data - строка, а не число
+					throw Data;	//Исключение: Data - строка, а не число
 				}
-				if (static_cast<int>(stoi(Data, 0, 10)) > INT_MAX) {//Если Data > маск. значения, которое может иметь int.
+
+				if (static_cast<int>(stoi(Data, 0, 10)) > INT_MAX) {	//Если Data > маск. значения, которое может иметь int.
 					cout << "ERROR: overflow (Type of wisdom > INT_MAX)." << endl;
 				}
-				else if (static_cast<int>(stoi(Data, 0, 10)) < INT_MIN) {//Если Data < мин. значения, которое может иметь int.
+				else if (static_cast<int>(stoi(Data, 0, 10)) < INT_MIN) {	//Если Data < мин. значения, которое может иметь int.
 					cout << "ERROR: overflow (Type of wisdom < INT_MIN)." << endl;
 				}
-				else {//Если INT_MIN < Data < INT_MAX.
+				else {	//Если INT_MIN < Data < INT_MAX.
 					k = static_cast<int>(stoi(Data, 0, 10));
 				}
 			}
-			catch (string Data) {//Сообщаем об ошибке.
+			catch (string Data) {	//Сообщаем об ошибке.
 				cout << "ERROR: 'Type of wisdom' should be int ('Type of wisdom' == " << Data << ")." << endl;
 				k = 0;
 			}
 		}
-		else if (Data.compare("empty") == 0) { //Если FindData вернула "empty", то выход из функции.
+		else if (Data.compare("empty") == 0) {	//Если FindData вернула "empty", то выход из функции.
 			return 0;
 		}
 
@@ -51,18 +51,18 @@ namespace collection_of_wisdom_oop {
 		case 3:
 			sp = new puzzle;
 			break;
-		default: //Все, кроме 1, 2, 3, попадает сюда (неправильный тип мудрости). Пропускаем три строки. Выход из функции.
+		default:	//Все, кроме 1, 2, 3, попадает сюда (неправильный тип мудрости). Пропускаем три строки. Выход из функции.
 			Junk(ifst);
 			return 0;
 		}
 		bool Exit_Flag = true;
 		//Здесь обработка поля "Expression:".
 		do {
-			getline(ifst, Full_Line); //Строка заносится в Full_Line.
+			getline(ifst, Full_Line);	//Строка заносится в Full_Line.
 			Data = FindData("Expression:", Full_Line);
 			Exit_Flag = true;
 
-			if (Data.compare("error") == 0) { //Если FindData вернула "error" (не нашла подстроку "Expression:"), то пропускаем последующие строки.
+			if (Data.compare("error") == 0) {	//Если FindData вернула "error" (не нашла подстроку "Expression:"), то пропускаем последующие строки.
 				delete[] sp;
 				string Junk; //Для мусора.
 				getline(ifst, Junk); //Здесь - уникальная характеристика.
@@ -73,6 +73,7 @@ namespace collection_of_wisdom_oop {
 			else if (Data.compare("empty") == 0) {//Если FindData вернула "empty".
 				Exit_Flag = false; 
 			}
+
 		} while ((ifst.eof() == false) && (Exit_Flag == false)); //Пока не конец файла и Exit_Flag == false - цикл будет продолжаться.
 
 		if (ifst.eof()) {//Сообщаем о конце файла.
@@ -101,6 +102,7 @@ namespace collection_of_wisdom_oop {
 					if (isdigit(Data[0]) == 0) {
 						throw Data; //Исключение: Data - строка, а не число.
 					}
+
 					if (static_cast<int>(stoi(Data, 0, 10)) > 10) {//Если Data > 10.
 						delete[] sp;
 						cout << "ERROR: unexpected value (Rate > 10)." << endl;
@@ -140,24 +142,27 @@ namespace collection_of_wisdom_oop {
 
 		Full_Line.clear();//Чистим Full_Line.
 	}
-	string wisdom::FindData(const string &Text, string &Line)
-	{
+	string wisdom::FindData(const string &Text, string &Line) {
 		string Data;
+
 		if (Line.compare("") == 0) {//Если в строке ничего нет.
 			cout << "Empty line." << endl;
 			return "empty";
 		}
 		try {//Здесь ищем подстроку.
 			int Position = static_cast<int>(Line.find(Text));
+
 			if (Position != 0) {
 				throw Position;
 			}
 
 			try {//Если  Position == 0 (ничего не сдвинуто).
 				int Difference = static_cast<int>(Line.length()) - static_cast<int>(Text.length());
+
 				if (Difference == 0) {
 					throw Text;
 				}
+
 				Data = Line.substr(static_cast<int>(Text.length()), Difference);
 				return Data;
 			}
@@ -178,16 +183,14 @@ namespace collection_of_wisdom_oop {
 			}
 		}
 	}
-	void wisdom::Junk(ifstream &ifst)
-	{
+	void wisdom::Junk(ifstream &ifst) {
 		string Junk; //Для мусора.
 		getline(ifst, Junk); //Здесь - выражение.
 		getline(ifst, Junk); //Здесь - уникальная характеристика.
 		getline(ifst, Junk); //Здесь - оценка.
 		Junk.clear();
 	}
-	char& wisdom::CheckForOverflow(string & Data, char char_text[], ifstream &ifst, int Len)
-	{
+	char& wisdom::CheckForOverflow(string & Data, char char_text[], ifstream &ifst, int Len) {
 		if (static_cast<int>(Data.length()) < Len) { //Проверка на переполнение: Если длина данных < Len, то просто заносим подстроку в переменную.
 			strcpy_s(char_text, Len, Data.c_str());
 			return *char_text;
@@ -204,11 +207,12 @@ namespace collection_of_wisdom_oop {
 	int wisdom::Count_Comma() {
 		int comma = 0;
 		int i = 0;
-		while (this->expression[i] != '\0')
-		{
+
+		while (this->expression[i] != '\0') {
 			if (this->expression[i] == ',') {
 				comma++;
 			}
+
 			i++;
 		}
 		return comma;
@@ -216,5 +220,4 @@ namespace collection_of_wisdom_oop {
 	void wisdom::OutAphorism(ofstream &ofst, wisdom *sp) {
 		ofst << endl; 
 	}
-
-} // end collection_of_wisdom_oop namespace
+}
