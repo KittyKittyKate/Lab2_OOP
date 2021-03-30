@@ -124,10 +124,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="aphorism_IN_OUT_oop.cpp" />
+    <ClCompile Include="aphorism_MMAphorism_oop.cpp" />
+    <ClCompile Include="aphorism_MMProverb_oop.cpp" />
+    <ClCompile Include="aphorism_MM_oop.cpp" />
     <ClCompile Include="container_CONSTR_oop.cpp" />
     <ClCompile Include="container_IN_OUT_oop.cpp" />
+    <ClCompile Include="container_MM_oop.cpp" />
     <ClCompile Include="Lab2_OOP.cpp" />
     <ClCompile Include="proverb_IN_OUT_oop.cpp" />
+    <ClCompile Include="proverb_MMAphorism_oop.cpp" />
+    <ClCompile Include="proverb_MMProverb_oop.cpp" />
+    <ClCompile Include="proverb_MM_oop.cpp" />
     <ClCompile Include="puzzle_IN_OUT_oop.cpp" />
     <ClCompile Include="wisdom_IN_oop.cpp" />
   </ItemGroup>

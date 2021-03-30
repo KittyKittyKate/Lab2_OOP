@@ -3,7 +3,6 @@
 // Требеутся описание класса wisdom
 #include "wisdom_oop.h"
 namespace collection_of_wisdom_oop {
-	// прямоугольник
 	class aphorism : public wisdom {
 		char author[50];
 		
@@ -13,6 +12,10 @@ namespace collection_of_wisdom_oop {
 		void Out(ofstream &ofst); // вывод
 		void OutAphorism(ofstream &ofst, wisdom *sp);
 		aphorism() {} // создание без инициализации.
+		//lab 7
+		void MultiMethod(wisdom *other, ofstream &ofst);
+		void MMAphorism(ofstream &ofst);
+		void MMProverb(ofstream &ofst);
 	};
 } // end collection_of_wisdom_oop namespace
 #endif

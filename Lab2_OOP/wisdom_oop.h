@@ -17,7 +17,10 @@ namespace collection_of_wisdom_oop {
 		virtual void OutAphorism(ofstream &ofst, wisdom *sp);
 		int Count_Comma();
 		bool Compare(wisdom &other);
-	
+		//lab 7
+		virtual void MultiMethod(wisdom *other, ofstream &ofst) = 0;
+		virtual void MMAphorism(ofstream &ofst) = 0;
+		virtual void MMProverb(ofstream &ofst) = 0;
 	};
 } // end collection_of_wisdom_oop namespace
 #endif

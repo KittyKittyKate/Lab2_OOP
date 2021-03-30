@@ -14,6 +14,7 @@ namespace collection_of_wisdom_oop {// ѕростейший контейнер на основе одномерног
 		container(); // инициализаци€ контейнера
 		void OutAphorisms(ofstream &ofst);
 		~container() { Clear(); } // утилизаци€ контейнера
+		void MultiMethod(ofstream &ofst);
 	};
 } // end collection_of_wisdom_oop namespace
 #endif
