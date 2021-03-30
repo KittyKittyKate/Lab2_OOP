@@ -1,0 +1,22 @@
+# Suppress: EC112
+root = true
+
+[*.{cpp,h}]
+end_of_line = crlf
+cpp_indent_multi_line_relative_to = innermost_parenthesis
+cpp_indent_within_parentheses = align_to_parenthesis
+cpp_indent_case_contents = true
+cpp_indent_namespace_contents = false
+
+cpp_new_line_before_open_brace_namespace = new_line
+cpp_new_line_before_open_brace_function = new_line
+cpp_new_line_before_open_brace_block = new_line
+cpp_new_line_scope_braces_on_separate_lines = true
+cpp_new_line_before_else = true
+
+cpp_space_before_function_open_parenthesis = remove
+cpp_space_between_empty_parameter_list_parentheses = false
+
+cpp_space_after_comma = true
+cpp_space_pointer_reference_alignment = center
+cpp_wrap_preserve_blocks = never
