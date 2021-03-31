@@ -1,29 +1,38 @@
 Filled container.
 Multimethod.
+
 Aphorism and Aphorism
 'It never rains, but it pours' - R.Rollan
 'ABC' - DEF
+
 Aphorism and Proverb
 'It never rains, but it pours' - R.Rollan
 'Under a stone mat lies, still no water flows' - Country: Russian
+
 Aphorism and Puzzle
 'It never rains, but it pours' - R.Rollan
 'What has a face and two hands, but no arms or legs?' - Answer: Ñlock
+
 Proverb and Aphorism
 'Fine words,, butter no parsnips' - Country: Russian
 'ABC' - DEF
+
 Proverb and Proverb
 'GHI' - Country: Australia
 'Fine words,, butter no parsnips' - Country: Russian
+
 Proverb and Puzzle
 'Fine words,, butter no parsnips' - Country: Russian
 'KLM' - Answer: NOP
+
 Puzzle and Aphorism
 'KLM' - Answer: NOP
 'ABC' - DEF
+
 Puzzle and Proverb
 'What has a face and two hands, but no arms or legs?' - Answer: Ñlock
 'Fine words,, butter no parsnips' - Country: Russian
+
 Puzzle and Puzzle
 'What has a face and two hands, but no arms or legs?' - Answer: Ñlock
 'What has a face and two hands, but no arms or legs?' - Answer: Ñlock

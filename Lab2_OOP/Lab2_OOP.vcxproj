@@ -130,6 +130,7 @@
     <ClCompile Include="Aphorism_MMPuzzle.cpp" />
     <ClCompile Include="container_CONSTR_oop.cpp" />
     <ClCompile Include="container_IN_OUT_oop.cpp" />
+    <ClCompile Include="container_MM.cpp" />
     <ClCompile Include="Lab2_OOP.cpp" />
     <ClCompile Include="proverb_IN_OUT_oop.cpp" />
     <ClCompile Include="Proverb_MM.cpp" />

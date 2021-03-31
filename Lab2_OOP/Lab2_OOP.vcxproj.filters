@@ -72,6 +72,9 @@
     <ClCompile Include="Puzzle_MMPuzzle.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="container_MM.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="aphorism_oop.h">
