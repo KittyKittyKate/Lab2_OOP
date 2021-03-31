@@ -1,9 +1,24 @@
-1It never rains,, but it pours
+1It never rains, but it pours
+R.Rollan
+4
+1ABC
+DEF
+5
+1It never rains, but it pours
 R.Rollan
 4
 2Under a stone mat lies, still no water flows
 Russian
+4
+2Fine words,, butter no parsnips
+Russian
+9
+1ABC
+DEF
 5
+2GHI
+Australia
+3
 2Fine words,, butter no parsnips
 Russian
 9

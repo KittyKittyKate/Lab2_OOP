@@ -1,15 +1,19 @@
 Filled container.
 Multimethod.
 
-Proverb and Aphorism
-'It never rains,, but it pours' - R.Rollan
-'Under a stone mat lies, still no water flows' - Russian
+Aphorism and Aphorism
+'It never rains, but it pours' - R.Rollan
+'ABC' - DEF
 
 Proverb and Aphorism
-'It never rains,, but it pours' - R.Rollan
+'It never rains, but it pours' - R.Rollan
+'Under a stone mat lies, still no water flows' - Russian
+
+Aphorism and Proverb
 'Fine words,, butter no parsnips' - Russian
+'ABC' - DEF
 
 Proverb and Proverb
-'Under a stone mat lies, still no water flows' - Russian
+'GHI' - Australia
 'Fine words,, butter no parsnips' - Russian
 Empty container.
