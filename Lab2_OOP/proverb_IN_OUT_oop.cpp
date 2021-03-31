@@ -40,4 +40,7 @@ namespace collection_of_wisdom_oop {
 	void proverb::Out(ofstream &ofst) {
 		ofst << this->country;
 	}
+	void proverb::MMOut(ofstream &ofst) {
+		ofst << "'" << this->expression << "' - Country: " << this->country << endl;
+	}
 }

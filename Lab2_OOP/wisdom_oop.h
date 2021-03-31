@@ -19,6 +19,11 @@ namespace collection_of_wisdom_oop {
 		static string FindData(const string &Text, string &Line);
 		static void Junk(ifstream &ifst);
 		static char &CheckForOverflow(string &Data, char char_text[], ifstream &ifst, int Len);
+		virtual void MultiMethod(wisdom *other, ofstream &ofst) = 0;
+		virtual void MMAphorism(ofstream &ofst) = 0;
+		virtual void MMProverb(ofstream &ofst) = 0;
+		virtual void MMPuzzle(ofstream &ofst) = 0;
+		virtual void MMOut(ofstream &ofst) = 0;
 	};
 }
 #endif

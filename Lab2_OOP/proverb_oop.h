@@ -9,6 +9,11 @@ namespace collection_of_wisdom_oop {
 		string InData(ifstream &ifst);
 		void Out(ofstream &ofst);
 		proverb() {}
+		void MultiMethod(wisdom *other, ofstream &ofst);
+		void MMAphorism(ofstream &ofst);
+		void MMProverb(ofstream &ofst);
+		void MMPuzzle(ofstream &ofst);
+		void MMOut(ofstream &ofst);
 	};
 }
 #endif

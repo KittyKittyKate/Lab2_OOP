@@ -40,4 +40,7 @@ namespace collection_of_wisdom_oop {
 	void puzzle::Out(ofstream &ofst) {
 		ofst << "Answer: " << this->answer;
 	}
+	void puzzle::MMOut(ofstream &ofst) {
+		ofst << "'" << this->expression << "' - Answer: " << this->answer << endl;
+	}
 }

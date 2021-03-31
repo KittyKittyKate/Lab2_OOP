@@ -15,6 +15,7 @@ namespace collection_of_wisdom_oop {
 		container();
 		void OutAphorisms(ofstream &ofst);
 		~container() { Clear(); }
+		void MultiMethod(ofstream &ofst);
 	};
 } 
 #endif

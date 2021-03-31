@@ -23,12 +23,15 @@ int main(int argc,char* argv[]) {
 	container c = container();
 	c.In(ifst);
 	ofst << "Filled container." << endl;
+	c.MultiMethod(ofst);
+	/*
 	c.Out(ofst);// обыкновенный вывод
 	ofst << "\n\nSorted container." << endl;
 	c.Sort();//отсортировали
 	c.Out(ofst);//вывод сортированного контейнера
 	ofst << "\n\nFiltered container." << endl;
 	c.OutAphorisms(ofst);//вывод только афоризмов
+	*/
 	c.Clear();
 	ofst << "Empty container." << endl;
 	cout << "Goodbye" << endl;

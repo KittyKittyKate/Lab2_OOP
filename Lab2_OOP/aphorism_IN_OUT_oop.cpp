@@ -46,4 +46,7 @@ namespace collection_of_wisdom_oop {
 		ofst << ". My rate: " << sp->rate << endl;
 		ofst << "Count of comma: " << sp->Count_Comma() << endl;
 	}
+	void aphorism::MMOut(ofstream &ofst) {
+		ofst << "'" << this->expression << "' - " << this->author << endl;
+	}
 }
