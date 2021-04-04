@@ -3,5 +3,5 @@
 
 namespace collection_of_wisdom_oop {
 	void aphorism::MMProverb(ofstream &ofst) {
-		ofst << "Aphorism and Proverb" << endl;
+		ofst << "Proverb and Aphorism" << endl;
 	}}
